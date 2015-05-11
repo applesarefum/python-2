@@ -10,4 +10,6 @@ def foo():
         print(c.red+"My name just so happens to not be"+c.blue+" {}".format(name))
     else:
         foo()
-foo()
+try:foo()
+except (EOFError,KeyboardInterrupt):
+    print('\b\bBuh-Bye!')
