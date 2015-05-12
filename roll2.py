@@ -1,11 +1,8 @@
 import random as rand
 def roll1(sides):
-    return rand.randint(1,sides)
+    return rand.randint(1,int(sides))
 def roll(times,sides):
-    total=0
-    for count in range(times):
-        total+=roll1(sides)
-    print(total)
+    return rand.randint(int(times),int(sides)*int(times))
 
 if __name__=='__main__':
     qwe=roll1(7)

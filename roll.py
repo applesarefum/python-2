@@ -1,73 +1,23 @@
-import random as r
-import colors as c
+import random as rand
+def roll1(sides):
+    return rand.randint(1,sides)
+def roll(times,sides):
+    total=0
+    for count in range(times):
+        total+=roll1(sides)
+    return total
 
-sides=[None]
+if __name__=='__main__':
+    qwe=roll1(7)
+    print(qwe)
+    qwe=roll(3,6)
+    print(qwe)
+#    def varin():
+#        
+#        bar=input('How many sides would you like this die to have? ')
+#        bar=int(bar)
+#        qwe=input('How many times would you like to roll this die? ')
+#        qwe=int(qwe)
+#        foo=roll(qwe,bar)
+#        print(foo)
 
-sides.append(''' -------
-|       |
-|   •   |
-|       |
- -------''')
-
-sides.append(''' -------
-| •     |
-|       |
-|     • |
- -------''')
-
-sides.append(''' -------
-| •     |
-|   •   |
-|     • |
- -------''')
-
-sides.append(''' -------
-| •   • |
-|       |
-| •   • |
- -------''')
-
-sides.append(''' -------
-| •   • |
-|   •   |
-| •   • |
- -------''')
-
-sides.append(''' -------
-| •   • |
-| •   • |
-| •   • |
- -------''')
-
-sides.append(''' -------
-| •   • |
-| • • • |
-| •   • |
- -------''')
-
-sides.append(''' -------
-| • • • |
-| •   • |
-| • • • |
- -------''')
-
-sides.append(''' -------
-| • • • |
-| • • • |
-| • • • |
- -------''')
-dice=1
-last_dice=1
-print(c.red+c.clear)
-
-print('To quit, press Ctrl+C at any time.')
-def roll(dice,sides):
-    try:
-        while True:
-            try:
-                for c in range(int(dice)):
-                    print(sides[r.randint(1,int(sides))])
-            except ValueError:
-                print('Invalid Number!')
-    except KeyboardInterrupt:
-        print('Buh-Bye')
