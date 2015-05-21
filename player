@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+import roll as r
+import colors as c
+print(c.clear+'What is your players name?')
+name=input('>').strip().title()
+print(c.clear+"{}'s stats are".format(name))
+print('Intelligence:',r.parse_roll('2d5'))
+print('Strength:',r.parse_roll('2d5'))
+print('Wisdom:',r.parse_roll('2d5'))
+print('Agility:',r.parse_roll('2d5'))
+print('Luck:',r.parse_roll('2d5'))
+print('Charisma:',r.parse_roll('2d5'))
+print('Dexterity:',r.parse_roll('2d5'))
+print('Tenacity:',r.parse_roll('2d5'))
