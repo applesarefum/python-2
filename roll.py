@@ -2,7 +2,7 @@
 import random as rand
 
 def roll(times=1,sides=6):
-    """qwe"""
+    """rolls a die"""
     total=0
     for count in range(times):
         total+=rand.randint(1,sides)
