@@ -1,18 +1,27 @@
-#!/usr/bin/env python3
 import roll as r
-Intelligence=r.roll(2,5)
-Strength=r.roll(2,5)
-Wisdom=r.roll(2,5)
-Agility=r.roll(2,5)
-Luck=r.roll(2,5)
-Charisma=r.roll(2,5)
-Dexterity=r.roll(2,5)
-Tenacity=r.roll(2,5)
-print('Intelligence:'+str(Intelligence))
-print('Strength:'+str(Strength))
-print('Wisdom:'+str(Wisdom))
-print('Agility:'+str(Agility))
-print('Luck:'+str(Luck))
-print('Charisma:'+str(Charisma))
-print('Dexterity:'+str(Dexterity))
-print('Tenacity:'+str(Tenacity))
+class Player():
+    def __init__(self):
+        self.intelligence=r.roll(2,5)
+        self.strength=r.roll(2,5)
+        self.wisdom=r.roll(2,5)
+        self.agility=r.roll(2,5)
+        self.luck=r.roll(2,5)
+        self.charisma=r.roll(2,5)
+        self.dexterity=r.roll(2,5)
+        self.tenacity=r.roll(2,5)
+    def showstats(self):
+        text='''
+        Intelligence:  {s.intelligence}
+        Strength:      {s.strength}
+        Wisdom:        {s.wisdom}
+        Agility:       {s.agility}
+        Luck:          {s.luck}
+        Charisma:      {s.charisma}
+        Dexterity:     {s.dexterity}
+        Tenacity:      {s.tenacity}
+        '''
+        print(text.format(s=self))
+
+if __name__=='__main__':
+    player=Player()
+    player.showstats()
