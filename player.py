@@ -1,4 +1,5 @@
 import roll as r
+import json
 class Player():
     def __init__(self):
         self.intelligence=r.roll(2,5)
@@ -22,6 +23,19 @@ class Player():
         '''
         print(text.format(s=self))
 
+    def save(self):
+        with open('player.json','w') as outfile:
+            outfile.write(json.dumps({
+            "strength":self.strength,
+            "wisdom":self.wisdom,
+            "agility":self.agility,
+            "luck":self.luck,
+            "charisma":self.charisma,
+            "dexterity":self.dexterity,
+            "tenacity":self.tenacity,
+            "intelligence":self.intelligence
+            }))
 if __name__=='__main__':
     player=Player()
     player.showstats()
+    player.save()

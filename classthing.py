@@ -25,5 +25,5 @@ class Enemy(Stats):
     
 
 if __name__=='__main__':
-    p=Enemy()
-    p.showstats()
+    e=Enemy()
+    e.showstats()
