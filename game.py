@@ -22,10 +22,16 @@ class Game():
   exit   exit gaem(o mi gosh u r dum)
 ''')
 
-            #TODO pick monster
+            elif thing=='pick':
+                pass
+                #TODO pick monster
 
             else:
                 print('I dont no hao 2 du tht')
+
+if __name__=='__main__':
+    qwer=Game()
+    qwer.start()
 if __name__=='__main__':
     qwer=Game()
     qwer.start()

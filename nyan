@@ -3,13 +3,5 @@ import colors as col
 import random as rand
 
 while True:
-    try:
-        while True:
-            print(col.random_color()+'NYAN',end=' ')
-    except KeyboardInterrupt:
-    print('''
-           __..--''``---....___   _..._    __
- /// //_.-'    .-/";  `        ``<._  ``.''_ `. / // /
-///_.-' _..--.'_    \                    `( ) ) // //
-/ (_..-' // (< _     ;_..__               ; `' / ///
- / // // //  `-._,_)' // / ``--...____..-' /// / //  ''')
+    while True:
+        print(col.random_color()+'NYAN',end=' ')

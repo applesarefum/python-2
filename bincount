@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+import sys
+import time
+count=0
+speed=.01
+while True:
+    for count in range(256):
+        binform='{}: {:08b}'
+        print(binform.format(count,count))
+        time.sleep(speed)
